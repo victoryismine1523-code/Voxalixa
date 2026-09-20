@@ -1,0 +1,19 @@
+# Voxalixa — robots.txt
+# Allow full crawling of public content; block nothing that should be indexed.
+
+User-agent: *
+Allow: /
+
+# Disallow nothing sensitive is served at these paths, but keep crawlers out of
+# build artifacts and duplicated entry points.
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /src/
+
+# Crawl-delay is optional; omitted so bots can crawl at full speed.
+
+# Sitemaps
+Sitemap: https://voxalixa.io/sitemap.xml
+
+# Host directive (Yandex; harmless elsewhere)
+Host: https://voxalixa.io
