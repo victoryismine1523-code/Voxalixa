@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0B0B0F" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- ============================================================
+         PRIMARY SEO
+         ============================================================ -->
+    <title>Voxalixa — Creative Digital Agency | Design, Web, Games &amp; Motion</title>
+    <meta name="description" content="Voxalixa is a creative digital agency building brand identities, high-performance websites, immersive games and animated wallpapers. 150+ projects shipped, 100+ happy clients. Get a free quote in 24 hours." />
+    <meta name="author" content="Voxalixa" />
+    <meta name="creator" content="Voxalixa" />
+    <meta name="publisher" content="Voxalixa" />
+    <meta name="keywords" content="creative digital agency, graphic design agency, brand identity design, website development company, web design services, game development studio, animated wallpapers, UI UX design, logo design, motion graphics, Bengaluru creative agency" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <link rel="canonical" href="https://voxalixa.io/" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="IN-KA" />
+    <meta name="geo.placename" content="Indiranagar, Bengaluru, Karnataka" />
+    <meta name="ICBM" content="12.9784, 77.6408" />
+
+    <!-- ============================================================
+         PERFORMANCE — critical resource hints.
+         The hero image IS the LCP element: preload it at high priority
+         so first paint is not gated behind a discovery pass.
+         ============================================================ -->
+    <link rel="preload" as="image" href="/hero-bg.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/hero-bg.jpeg" type="image/jpeg" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--
+      CRITICAL: the Google Fonts stylesheet is loaded NON-BLOCKING.
+      A pending stylesheet blocks execution of every script after it, so a slow
+      fonts.googleapis.com would stall the entire React app. `media="print"`
+      keeps it out of the critical path; onload flips it to `all`. The inline
+      <style> below sets a system-font fallback so text paints immediately and
+      swaps in Montserrat when it arrives (display=swap).
+    -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+
+    <!-- Inline brand color + system-font fallback so first paint is never white or invisible -->
+    <style>
+      html, body { background: #0B0B0F; color: #F8F8FF; margin: 0; }
+      /* FOIT guard: render immediately in a system stack, swap to Montserrat on load */
+      body {
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                     Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      .fonts-loaded body { font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    </style>
+    <script>
+      // Flag when Montserrat is actually available (used for progressive swap)
+      if (document.fonts && document.fonts.load) {
+        document.fonts.load('700 1rem Montserrat').then(function () {
+          document.documentElement.classList.add('fonts-loaded')
+        }).catch(function () {})
+      } else {
+        document.documentElement.classList.add('fonts-loaded')
+      }
+    </script>
+
+    <!-- ============================================================
+         OPEN GRAPH
+         ============================================================ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Voxalixa" />
+    <meta property="og:url" content="https://voxalixa.io/" />
+    <meta property="og:title" content="Voxalixa — Creative Digital Agency | Design, Web, Games &amp; Motion" />
+    <meta property="og:description" content="Brand identities, high-performance websites, immersive games and animated wallpapers. 150+ projects shipped. Get a free quote in 24 hours." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:image" content="https://voxalixa.io/hero-bg.webp" />
+    <meta property="og:image:secure_url" content="https://voxalixa.io/hero-bg.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1536" />
+    <meta property="og:image:height" content="768" />
+    <meta property="og:image:alt" content="Voxalixa — Creative Digital Agency" />
+
+    <!-- ============================================================
+         TWITTER / X
+         ============================================================ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@voxalixa" />
+    <meta name="twitter:creator" content="@voxalixa" />
+    <meta name="twitter:url" content="https://voxalixa.io/" />
+    <meta name="twitter:title" content="Voxalixa — Creative Digital Agency | Design, Web, Games &amp; Motion" />
+    <meta name="twitter:description" content="Brand identities, high-performance websites, immersive games and animated wallpapers. 150+ projects shipped. Get a free quote in 24 hours." />
+    <meta name="twitter:image" content="https://voxalixa.io/hero-bg.webp" />
+    <meta name="twitter:image:alt" content="Voxalixa — Creative Digital Agency" />
+
+    <!-- ============================================================
+         STRUCTURED DATA — JSON-LD
+         Organization + WebSite + Services + FAQ + Breadcrumbs
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://voxalixa.io/#organization",
+          "name": "Voxalixa",
+          "legalName": "Voxalixa",
+          "alternateName": "Voxalixa Creative Digital Agency",
+          "url": "https://voxalixa.io/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://voxalixa.io/#logo",
+            "url": "https://voxalixa.io/favicon.svg",
+            "caption": "Voxalixa"
+          },
+          "image": {
+            "@id": "https://voxalixa.io/#organizationImage",
+            "@type": "ImageObject",
+            "url": "https://voxalixa.io/hero-bg.webp",
+            "width": 1536,
+            "height": 768
+          },
+          "description": "Voxalixa is a creative digital agency building brand identities, high-performance websites, immersive games and animated wallpapers.",
+          "slogan": "Ideas. Design. Develop. Grow.",
+          "foundingDate": "2019",
+          "email": "hello@voxalixa.io",
+          "telephone": "+1-555-234-9012",
+          "priceRange": "$$",
+          "currenciesAccepted": "USD",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Indiranagar",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560038",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.9784,
+            "longitude": 77.6408
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "India" },
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "United Arab Emirates" },
+            { "@type": "Place", "name": "Worldwide" }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "hello@voxalixa.io",
+              "telephone": "+1-555-234-9012",
+              "availableLanguage": ["English"],
+              "areaServed": "Worldwide"
+            }
+          ],
+          "sameAs": [
+            "https://instagram.com/voxalixa",
+            "https://twitter.com/voxalixa",
+            "https://www.linkedin.com/company/voxalixa",
+            "https://dribbble.com/voxalixa",
+            "https://www.behance.net/voxalixa"
+          ],
+          "knowsAbout": [
+            "Graphic Design",
+            "Brand Identity Design",
+            "Website Development",
+            "Web Design",
+            "Game Development",
+            "Animated Wallpapers",
+            "UI/UX Design",
+            "Motion Graphics",
+            "Logo Design"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Voxalixa Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "@id": "https://voxalixa.io/#service-graphic-design",
+                  "name": "Graphic Design",
+                  "serviceType": "Graphic Design",
+                  "provider": { "@id": "https://voxalixa.io/#organization" },
+                  "description": "Brand identities, logo systems, marketing collateral and social kits built on a clear visual language.",
+                  "areaServed": "Worldwide",
+                  "offers": { "@type": "Offer", "price": "499", "priceCurrency": "USD" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "@id": "https://voxalixa.io/#service-game-development",
+                  "name": "Game Development",
+                  "serviceType": "Game Development",
+                  "provider": { "@id": "https://voxalixa.io/#organization" },
+                  "description": "Playable prototypes, polished 2D/3D games and interactive experiences from concept to store-ready build.",
+                  "areaServed": "Worldwide",
+                  "offers": { "@type": "Offer", "price": "1299", "priceCurrency": "USD" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "@id": "https://voxalixa.io/#service-website-development",
+                  "name": "Website Development",
+                  "serviceType": "Website Development",
+                  "provider": { "@id": "https://voxalixa.io/#organization" },
+                  "description": "Fast, responsive, SEO-ready websites and web apps built to convert visitors into customers.",
+                  "areaServed": "Worldwide",
+                  "offers": { "@type": "Offer", "price": "499", "priceCurrency": "USD" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "@id": "https://voxalixa.io/#service-animated-wallpapers",
+                  "name": "Animated Wallpapers",
+                  "serviceType": "Animated Wallpapers",
+                  "provider": { "@id": "https://voxalixa.io/#organization" },
+                  "description": "Looping motion backgrounds and live wallpapers for desktop, mobile and web.",
+                  "areaServed": "Worldwide",
+                  "offers": { "@type": "Offer", "price": "499", "priceCurrency": "USD" }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://voxalixa.io/#website",
+          "url": "https://voxalixa.io/",
+          "name": "Voxalixa",
+          "description": "Creative digital agency — design, web, games and motion.",
+          "publisher": { "@id": "https://voxalixa.io/#organization" },
+          "inLanguage": "en-US",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://voxalixa.io/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://voxalixa.io/#webpage",
+          "url": "https://voxalixa.io/",
+          "name": "Voxalixa — Creative Digital Agency | Design, Web, Games &amp; Motion",
+          "isPartOf": { "@id": "https://voxalixa.io/#website" },
+          "about": { "@id": "https://voxalixa.io/#organization" },
+          "primaryImageOfPage": { "@id": "https://voxalixa.io/#organizationImage" },
+          "description": "Brand identities, high-performance websites, immersive games and animated wallpapers from Voxalixa.",
+          "inLanguage": "en-US",
+          "breadcrumb": { "@id": "https://voxalixa.io/#breadcrumb" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://voxalixa.io/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://voxalixa.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://voxalixa.io/#services" },
+            { "@type": "ListItem", "position": 3, "name": "Portfolio", "item": "https://voxalixa.io/#portfolio" },
+            { "@type": "ListItem", "position": 4, "name": "Pricing", "item": "https://voxalixa.io/#pricing" },
+            { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://voxalixa.io/#contact" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://voxalixa.io/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What services does Voxalixa offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Voxalixa offers graphic design and brand identity, website design and development, game development, and animated or live wallpapers. Every engagement includes source files and a structured handover."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a project cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Starter projects begin at $499 one-time, the Professional tier is $1,299 per project, and Enterprise engagements are quoted to scope. Every tier includes the same level of craft."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does a project take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most design engagements deliver in 5 to 7 days with two revision rounds. Larger website and game builds run 3 to 6 weeks depending on scope. Timelines are agreed before work starts."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you work with clients outside India?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Voxalixa is based in Indiranagar, Bengaluru and works with clients across India, the United States, the United Kingdom, the UAE and worldwide, remotely and asynchronously."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I own the final files?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. You receive full ownership of all deliverables including source files, exports and any brand guidelines produced during the project."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I start a project with Voxalixa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Send a short brief through the contact form or the Get Started popup. You get a reply within 24 hours with ideas, a timeline and a clear next step."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
